@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Press Start 2P", sans-serif;
+  overflow: hidden;
+}
+.reset {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid red;
+  padding: 4px 8px;
+  border-radius: 5px;
+  background-color: red;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  text-align: center;
+  font-size: 8px;
+  line-height: 14px;
+  visibility: hidden;
+}
+.reset.active {
+  visibility: visible;
+}
+h1 {
+  margin-bottom: 20px;
+}
+.home {
+  background: url(/assets/images/background.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.home .container {
+  margin-top: 20px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.home .container a {
+  margin-top: 25px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid steelblue;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: steelblue;
+  animation: scaling 2s infinite ease-in-out;
+}
+.pikachu {
+  width: 160px;
+}
+.home .container a:hover {
+  opacity: 0.9;
+}
+@keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.battle {
+  background: url(/assets/images/background.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.container {
+  width: 500px;
+  height: 500px;
+  border: 2px solid black;
+  outline: 2px solid #fff;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+.battle-container {
+  flex-basis: 78%;
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.pkm {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 10px;
+  overflow: hidden;
+}
+.pkm-4 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 10px;
+  margin-left: 50px;
+}
+
+.name {
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+.hp-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bar {
+  width: 100px;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.pkm-4 .hp-bar .bar {
+  width: 80px;
+}
+.instructions-stage1 {
+  margin: 10px 0;
+}
+#first {
+  height: 100%;
+  background: greenyellow;
+  border-radius: 10px;
+  border: 1px solid #000;
+  width: 100%;
+  transition: width 1s linear;
+}
+#second {
+  height: 100%;
+  background: greenyellow;
+  border-radius: 10px;
+  border: 1px solid #000;
+  width: 100%;
+  transition: width 1s linear;
+}
+#first-HP {
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+#second-HP {
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+.bulba {
+  position: absolute;
+  left: 10px;
+  bottom: 0px;
+  width: 150px;
+  height: 120px;
+}
+.bulba.leech {
+  animation: bck 1s;
+}
+@keyframes bck {
+  0% {
+    background: none;
+  }
+  20% {
+    background: greenyellow;
+  }
+  40% {
+    background: none;
+  }
+  60% {
+    background: greenyellow;
+  }
+  80% {
+    background: none;
+  }
+  100% {
+    background: greenyellow;
+  }
+}
+.tedi {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  height: 100px;
+}
+.tedi.attackerL {
+  animation: attackerL 0.5s;
+}
+.tedi.attacked {
+  animation: atcked 0.5s;
+}
+.bulba.attackerR {
+  animation: attackerR 0.5s;
+}
+.bulba.attacked {
+  animation: atcked 0.5s;
+}
+@keyframes atcked {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  0% {
+    opacity: 1;
+  }
+}
+@keyframes attackerR {
+  0% {
+  }
+  50% {
+    transform: translateX(45px);
+  }
+  0% {
+  }
+}
+@keyframes attackerL {
+  0% {
+  }
+  50% {
+    transform: translateX(-45px);
+  }
+  0% {
+  }
+}
+.text-container {
+  flex-basis: 22%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+.atk {
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.atk:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.atk:active {
+  color: black;
+  transform: scale(1.01);
+  background-color: greenyellow;
+}
+.text {
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  outline: 1px solid #fff;
+  text-align: initial;
+  font-size: 15px;
+  font-weight: 300;
+  visibility: hidden;
+  text-align: center;
+  line-height: 25px;
+}
+.gamewin {
+  margin-top: 6px;
+  text-decoration: none;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid steelblue;
+  padding: 12px 16px;
+  border-radius: 5px;
+  background-color: steelblue;
+  outline: none;
+  visibility: hidden;
+}
+.gamewin:active {
+  transform: scale(0.98);
+}
+.gamewin:hover {
+  opacity: 0.9;
+}
+.gamelost {
+  font-family: "Press Start 2P", sans-serif;
+  margin-top: 6px;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid red;
+  padding: 12px 16px;
+  border-radius: 5px;
+  background-color: red;
+  font-size: 12px;
+  font-weight: 400;
+  outline: none;
+  visibility: hidden;
+}
+.gamelost:active {
+  transform: scale(0.98);
+}
+.gamelost:hover {
+  opacity: 0.8;
+}
+#stage2 .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#stage2 .container .catchablePokemon {
+  /* width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%; */
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+#stage2 .container:hover .catchablePokemon {
+  transform: scale(1.2);
+}
+
+.instructions-stage2 {
+  margin: 10px 0;
+  color: red;
+}
+#stage2 .container .timer {
+  padding: 6px;
+}
+#stage2 .container .catchablePokemon.caught {
+  transform: translate(-50%, -50%) scale(0);
+}
+#stage2 h1 {
+  padding: 40px;
+}
+.text2 {
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  outline: 1px solid #fff;
+  text-align: initial;
+  font-size: 15px;
+  font-weight: 300;
+  visibility: hidden;
+  text-align: center;
+  line-height: 25px;
+}
+.pokemon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.pokemon.caught {
+  transform: translate(-50%, -50%) scale(0);
+}
+.container2 {
+  margin: 40px;
+  display: block;
+}
+.timer {
+  display: none;
+}
+.pokeball {
+  margin: 60px;
+  display: none;
+  width: 400px;
+  height: 400px;
+}
+.pokeball img {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 400px) {
+  .container {
+    width: 300px;
+  }
+  h1 {
+    font-size: 12px;
+  }
+  p {
+    font-size: 10px;
+  }
+  h2 {
+    font-size: 10px;
+  }
+  h3 {
+    font-size: 10px;
+  }
+}

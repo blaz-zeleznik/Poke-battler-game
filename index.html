@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poke - Battle</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <a href="/index.html" class="reset"
+      >Reset <br />
+      Game</a
+    >
+    <!-- Welcome Section -->
+    <section class="home" id="home">
+      <div class="container">
+        <p>
+          Welcome To Pokemon Adventure! <br />
+          <br />Click below to begin..
+        </p>
+        <img src="/assets/images/waving-pikachu.gif" class="pikachu" />
+        <a href="#stage1" id="startStage1">Press Start</a>
+      </div>
+    </section>
+
+    <!--  -->
+
+    <!-- Stage 1 -->
+    <section class="battle" id="stage1">
+      <h1>Welcome To Stage 1</h1>
+      <p class="instructions-stage1">Defeat the opposing pokemon!</p>
+      <div class="container">
+        <div class="battle-container">
+          <div class="pkm">
+            <div class="name">
+              <h3 id="pokemon-name">Teddiursa</h3>
+            </div>
+            <div class="hp-bar">
+              <h4>Hp</h4>
+              <div class="bar">
+                <div class="bar-inner" id="second"></div>
+                <p id="second-HP">100/100</p>
+              </div>
+            </div>
+          </div>
+          <div class="pkm">
+            <img src="/assets/images/0.png" class="tedi" id="pokemon-pic" />
+          </div>
+          <div class="pkm">
+            <img src="/assets/images/bulbasaur.png" class="bulba" />
+          </div>
+          <div class="pkm-4">
+            <div class="name">
+              <h3>Bulbasaur</h3>
+            </div>
+            <div class="hp-bar">
+              <h4>Hp</h4>
+              <div class="bar">
+                <div class="bar-inner" id="first"></div>
+                <p id="first-HP">80/80</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-container">
+          <div class="atk" id="scratch">Scratch</div>
+          <div class="atk" id="vinevhip">Vine Vhip</div>
+          <div class="atk" id="growl">Growl</div>
+          <div class="atk" id="solarbeam">Solar Beam</div>
+        </div>
+      </div>
+      <h3 class="text"></h3>
+
+      <a href="#stage2" class="gamewin">Click To Continue to Stage 2</a>
+
+      <button class="gamelost">Try Again</button>
+      <audio src="/assets/sounds/atksound.mp3" id="atksound"></audio>
+      <audio src="/assets/sounds/victorysound.mp3" id="victorysound"></audio>
+      <audio
+        src="/assets/sounds/battlesound.mp3"
+        id="battlesound"
+        loop="loop"
+      ></audio>
+      <audio src="/assets/sounds/pokeclick.mp3" id="pokeclick"></audio>
+      <audio src="/assets/sounds/gameover.mp3" id="gameoversound"></audio>
+    </section>
+    <!-- End of Stage 1 -->
+
+    <!-- Stage 2 -->
+    <section class="battle" id="stage2">
+      <h1>Welcome To Stage 2</h1>
+      <p class="instructions-stage2">
+        Catch the Pokemon by clicking on it fast as you can!
+      </p>
+
+      <p class="timer" id="time">15s</p>
+      <div class="pokeball">
+        <img src="/assets/images/pokeball.gif" />
+      </div>
+      <div class="container container2">
+        <img src="/assets/images/0.png" class="catchablePokemon" />
+      </div>
+      <h3 class="text2"></h3>
+    </section>
+    <script src="/script.js"></script>
+  </body>
+</html>
